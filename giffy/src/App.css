@@ -1,0 +1,91 @@
+body {
+  background-color: #aaaaaa;
+  color: black;
+}
+
+.App-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  min-height: 70vh;
+}
+
+.App-content div img{
+  max-width: 300px;
+  max-height: 450px;
+}
+
+.cabecera {
+  flex-flow: column nowrap;
+  text-align: center;
+}
+
+.posterTitle{
+  position: absolute;
+  margin: auto;
+  *border: 1px solid black;
+  background-color: rgba(68, 67, 67, 0.527);
+  color: rgb(223, 219, 219);
+  padding: 0px 3px 0px 3px;
+  width: auto;
+  margin: 0 5px 0 5px;
+  width: 200px;
+}
+
+.posterImg{
+  margin: 0 5px 0 5px;
+}
+
+.App-logo {
+  height: 100px !important;
+  width: auto !important;
+  padding-left: 55px;
+}
+
+form input{
+  width: 400px;
+  height: 25px;
+  border-radius: 3px;
+  padding-left: 7px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.separador{
+  width: 100%;
+}
+
+.detalles{
+  width: 300px;
+  margin-left: 20px;
+}
+
+.detalles a{
+  text-decoration:none;
+  color: black;
+}
+
+.categorias div{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  cursor: default;
+}
+.categorias div h4{
+  padding: 0 5px 0 5px;
+  border-right: 1px solid black;
+  cursor: pointer;
+}
+
+.categorias h4:last-child {
+  border: 0px;
+}
