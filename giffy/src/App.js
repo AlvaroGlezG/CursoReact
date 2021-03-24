@@ -6,7 +6,7 @@ import Home from './pages/Home/index';
 import Detail from './pages/Detail/index';
 import {PosterContexProvider} from './context/PosterContext';
 import { Route } from 'wouter';
-import ListOfCategories from 'components/MoviesExample/ListOfCategories';
+import LazyCategories from 'components/MoviesExample/LazyCategories';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         </section>
         <hr/>
         <section className="categorias">
-            <Route path='/' component={ListOfCategories}/>
+            <Route path='/' component={LazyCategories}/>
         </section>
     </div>
   );
