@@ -17,7 +17,7 @@ export function usePosters({ keyword } = {}) {
       setLoading(false);
       localStorage.setItem('localKeyword', keywordToUse);
     });
-  }, [keyword, setPosters])
+  }, [keywordToUse, setPosters])
   // console.log(posters);
   return { loading, posters };
 }
