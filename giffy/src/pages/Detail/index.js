@@ -29,8 +29,7 @@ export default function Detail ({params}){
     if(result){
         //console.log(result);
         const urlID = `https://www.imdb.com/title/` + result.imdbID;
-        return(<>
-            <div className='separador'></div>
+        return(<div className="posterDetalles">
             <PosterComp className='posterDetail' poster={posterDetail.Poster} id={posterDetail.imdbID}/>
             <div className='detalles'>
                 <h2><em>{result.Title}</em></h2>
@@ -41,6 +40,6 @@ export default function Detail ({params}){
                 <p><strong>ID en IMDB</strong>: <em><a href={urlID}>{result.imdbID}</a></em></p>
                 <p><strong>Trama:</strong> <em>{result.Plot}</em></p>
             </div>
-        </>);
+        </div>);
     }else{return false;}
 }

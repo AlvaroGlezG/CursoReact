@@ -1,26 +1,26 @@
-import React, {useState} from 'react';
+import React, { useCallback } from 'react';
 import {useLocation} from 'wouter';
+import {usePosters} from 'hooks/usePosters';
 import SearchResult from 'pages/SearchResult/index';
+import LazyCategories from 'components/MoviesExample/LazyCategories';
+import SearchForm from 'components/SearchForm';
 
 export default function Home () {
-    const [keyword, setKeyword] = useState('');
     const [path, pushLocation] = useLocation();
+    const { posters } = usePosters();
 
-    const handleSubmit = evt => {
-        evt.preventDefault();
+    const handleSubmit = useCallback(({ keyword }) => {
         pushLocation(`/films/${keyword}`);
-    }
-    const handleChange = evt => {
-        setKeyword(evt.target.value);
-    }
+    }, [pushLocation]);
 
     return (<div>
 
-        <form onSubmit={handleSubmit}>
-            <input onChange={handleChange} placeholder="Search for a film" type="text"></input>
-        </form>
-
-        <SearchResult params={keyword}/>
+        {/* Formulario */}
+        <SearchForm onSubmit={handleSubmit}/>
+        {/* Busqueda de los ultimos resultados */}
+        <SearchResult params={posters}/>
+        {/* Categorias famosas */}
+        <LazyCategories />
 
     </div>);
 }

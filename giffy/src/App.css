@@ -4,14 +4,21 @@ body {
 }
 
 .App-content {
-  display: flex;
+  /*display: flex;
   flex-flow: row wrap;
   justify-content: center;
   padding-top: 20px;
   padding-bottom: 50px;
   margin-left: 10px;
-  margin-right: 10px;
-  min-height: 70vh;
+  margin-right: 10px;*/
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: masonry;
+  gap: 8px 5px;
+  align-items: center;
+  margin: 20px 0;
+  text-align: center;
 }
 
 .App-content div img{
@@ -20,34 +27,28 @@ body {
 }
 
 .cabecera {
+  display: flex;
   flex-flow: column nowrap;
-  text-align: center;
+  align-items: center;
 }
 
 .posterTitle{
   position: absolute;
-  margin: auto;
-  *border: 1px solid black;
-  background-color: rgba(68, 67, 67, 0.527);
+  /* border: 1px solid black; */
+  background-color: rgba(100, 100, 100, 0.281);
   color: rgb(223, 219, 219);
   padding: 0px 3px 0px 3px;
-  width: auto;
   margin: 0 5px 0 5px;
   width: 200px;
 }
 
-.posterImg{
-  margin: 0 5px 0 5px;
-}
-
 .App-logo {
   height: 100px !important;
-  width: auto !important;
-  padding-left: 55px;
+  width: 100px !important;
 }
 
 form input{
-  width: 400px;
+  width: 30%;
   height: 25px;
   border-radius: 3px;
   padding-left: 7px;
@@ -74,13 +75,19 @@ form{
   color: black;
 }
 
-.categorias div{
+.posterDetalles{
+  display: flex;
+  flex-flow: row wrap;
+  padding-left: 30%;
+}
+
+.categorias {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   cursor: default;
 }
-.categorias div h4{
+.categorias h4{
   padding: 0 5px 0 5px;
   border-right: 1px solid black;
   cursor: pointer;

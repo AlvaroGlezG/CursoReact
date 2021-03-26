@@ -7,7 +7,6 @@ export default function SearchResults({ params }) {
   const { keyword } = params;
   const { loading, posters } = usePosters({keyword});
 
-
   return <div className="App-content">
     {(loading)
       ? <Cargando/>

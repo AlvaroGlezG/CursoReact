@@ -6,23 +6,18 @@ import Home from './pages/Home/index';
 import Detail from './pages/Detail/index';
 import {PosterContexProvider} from './context/PosterContext';
 import { Route } from 'wouter';
-import LazyCategories from 'components/MoviesExample/LazyCategories';
 
 function App() {
   return (
     <div className="App">
-        <section className="App-content">
           <Cabecera />
+        <section>
           <div className='separador'></div>
           <PosterContexProvider>
             <Route className="cabecera" path="/" component={Home} />
             <Route path="/films/:keyword" component={SearchResults} />
             <Route path="/films/id/:id" component={Detail} />
           </PosterContexProvider>
-        </section>
-        <hr/>
-        <section className="categorias">
-            <Route path='/' component={LazyCategories}/>
         </section>
     </div>
   );

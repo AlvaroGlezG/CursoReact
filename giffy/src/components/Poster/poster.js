@@ -2,12 +2,12 @@ import React from 'react';
 import 'App.css';
 import {Link} from 'wouter';
 
-export default function PosterComp({ poster, title, id} = {className : 'null'} ) {
+function PosterComp({ poster, title, id} = {className : 'null'} ) {
 
     if(poster !== "N/A"){
         return (<div>
             <Link to={`/films/id/${id}`}>
-                <h3 className="posterTitle">{title}</h3>
+                {/* <h3 className="posterTitle">{title}</h3> */}
                 <img loading="lazy" className="posterImg" id={id} alt={title} src={poster}/>
             </Link>
         </div>)
@@ -16,3 +16,5 @@ export default function PosterComp({ poster, title, id} = {className : 'null'} )
     }
 
 }
+
+export default React.memo(PosterComp);
