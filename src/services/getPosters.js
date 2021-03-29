@@ -16,7 +16,7 @@ const fromApiResponseToPosters = apiResponse => {
 }
 
 export default async function GetPosters({ keyword = 'batman' } = {}) {
-    const apiURL = `http://www.omdbapi.com/?s=${keyword}&apikey=${apiKey}&type=movie`;
+    const apiURL = `https://www.omdbapi.com/?s=${keyword}&apikey=${apiKey}&type=movie`;
     
     return fetch(apiURL)
         .then((res) => res.json())

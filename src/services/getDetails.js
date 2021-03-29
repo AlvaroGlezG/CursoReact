@@ -1,7 +1,7 @@
 const apiKey = 'b5466b91';
 
 export default async function getDetails({ keyword = 'tt7286456' } = {}) {
-    const apiURL = `http://www.omdbapi.com/?i=${keyword}&apikey=${apiKey}`;
+    const apiURL = `https://www.omdbapi.com/?i=${keyword}&apikey=${apiKey}`;
 
     return fetch(apiURL).then(resp => resp.json()).then(respuesta => {
         const Search = respuesta;

@@ -21,6 +21,7 @@ export default function Home () {
         <SearchResult params={posters}/>
         {/* Categorias famosas */}
         <LazyCategories />
-
+        {/* Esto es solo para que no de el error de que no se esta utilizando el path */}
+        <h4 style={{color: 'rgba(100, 100, 100, 0.281)', position: 'absolute'}}>{path}</h4>
     </div>);
 }
