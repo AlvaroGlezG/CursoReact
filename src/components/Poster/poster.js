@@ -14,7 +14,6 @@ function PosterComp({ poster, title, id} = {className : 'null'} ) {
     }else{
         return false;
     }
-
 }
 
 export default React.memo(PosterComp);

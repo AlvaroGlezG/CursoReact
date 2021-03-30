@@ -1,7 +1,8 @@
+import React from 'react';
 import Category from './CategoryExample';
 import { categoriasMovies } from './Categorias';
 
-export default function ListOfCategories() {
+function ListOfCategories() {
     return (<>
         <h2>Peliculas famosas: </h2>
         <div className="separador"></div>
@@ -10,3 +11,5 @@ export default function ListOfCategories() {
         )}
     </>);
 }
+
+export default React.memo(ListOfCategories);
